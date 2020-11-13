@@ -1,7 +1,12 @@
 #!/usr/bin/env ruby
 require_relative '../logic/test'
+require_relative '../logic/checkerrors'
 
 lint = Test.new(ARGV[0])
 lint.check_file
 lint.read_file
-p lint.content
+# lint.content.each_with_index do |line, index|
+#  CheckErrors.new(line, index)
+# end
+find_error = CheckErrors.new(lint.content[0], 0)
+find_error.check_whitespaces
