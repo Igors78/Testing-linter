@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require_relative '../logic/test'
+
+lint = Test.new(ARGV[0])
+lint.check_file
+lint.read_file
