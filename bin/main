@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 require_relative '../logic/test'
 require_relative '../logic/checkerrors'
-
+require_relative '../logic/lint'
+require_relative '../logic/raisingerrors'
+include RaisingErrors
 lint = Test.new(ARGV[0])
 lint.check_file
 lint.read_file
@@ -10,3 +12,5 @@ lint.read_file
 # end
 find_error = CheckErrors.new(lint.content[0], 0)
 find_error.check_whitespaces
+find_error.check_length
+find_error.check_new_line
