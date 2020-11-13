@@ -1,4 +1,6 @@
 class Test
+  attr_reader :content
+
   def initialize(file_name)
     @file_name = file_name
     @content = nil
@@ -19,9 +21,9 @@ class Test
 
     if File.exist?(file_path)
       file_to_lint = File.new(file_path, 'r')
-      @content = file_to_lint.read
+      @content = file_to_lint.readlines
       file_to_lint.close
-      puts content
+      @content
     else
       abort 'File not found'
     end

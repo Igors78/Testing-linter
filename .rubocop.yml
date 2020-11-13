@@ -2,6 +2,7 @@ AllCops:
   Exclude:
     - "Guardfile"
     - "Rakefile"
+    - 'data/**/*'
 
   DisplayCopNames: true
 
