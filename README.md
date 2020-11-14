@@ -8,24 +8,26 @@
 
 # Getting Started
 
-- This linter will parse your file and find some errors as defined by [Ruby Style Guide](https://github.com/github/rubocop-github/blob/master/STYLEGUIDE.md)
+- This linter will parse your file and find some errors as defined by
+  [Ruby Style Guide](https://github.com/github/rubocop-github/blob/master/STYLEGUIDE.md)
 
 # Following can be tested with this linter
 
-- Each line of code must be of a readable length. Unless you have a reason to, keep lines to a maximum of 118 characters. Why 118? That's the width at which the pull request diff UI needs horizontal scrolling (making pull requests harder to review).
+- Each line of code must be of a readable length. Unless you have a reason to,
+  keep lines to a maximum of 118 characters. Why 118? That's the width at which
+  the pull request diff UI needs horizontal scrolling (making pull requests
+  harder to review).
 
 - There should be no trailing whitespaces left.
 
-- There should be spaces around operators, after commas, colons and semicolons, around { and before }.
+- There should be spaces around operators, after commas, colons and semicolons,
+  around { and before }.
 
 - There should be no spaces after (, [ or before ], ).
 
 - There should be no spaces after !.
 
 - There should be no unpaired |, (, ), {, }, [, ].
-
-
-
 
 ## Live Demo
 
