@@ -1,5 +1,5 @@
 class Test
-  attr_reader :content
+  attr_reader :content, :offence
 
   def initialize(file_name)
     @file_name = file_name

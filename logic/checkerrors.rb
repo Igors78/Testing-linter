@@ -2,7 +2,9 @@ require_relative '../logic/raisingerrors'
 
 class CheckErrors
   include RaisingErrors
-  def initialize(str, indx)
+  attr_reader :errors
+
+  def initialize(str = '', indx = 0)
     @str = str
     @indx = indx
   end
@@ -26,6 +28,7 @@ class CheckErrors
   def check_spacing
     (0...@str.length).each do |ind|
       if ['+', '-', '=', '/', '*', '{', '}'].include?(@str[ind]) && @str[ind - 1] != ' ' && @str[ind + 1] != ' '
+
         raise_an_issue(7, @indx)
       end
       raise_an_issue(8, @indx) if ['(', '[', '!'].include?(@str[ind]) && @str[ind + 1] == ' '
