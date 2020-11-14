@@ -2,7 +2,6 @@ require_relative '../logic/raisingerrors'
 
 class CheckErrors
   include RaisingErrors
-  attr_reader :errors
 
   def initialize(str = '', indx = 0)
     @str = str

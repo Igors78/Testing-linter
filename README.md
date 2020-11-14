@@ -2,21 +2,30 @@
 
 - In this project, the student builds an own customized linter for ruby files.
   The main goal is to put into practice the main concepts of Object Oriented
-  Programming. Particularly, classes and access to their attributes, work with
-  abstract syntax trees(AST).
+  Programming gained in Microverse currriculum Ruby module.
 
 ![screenshot](screenshot.png)
 
 # Getting Started
 
-- This linter will parse your file and find any numbers except commonly used
-  (like -10..10, 100 or 1000) and will suggest you to put a comment for this
-  selected number in order to make code more understandable and to make possible
-  to know context the number is used in. Mostly usable field is code for
-  financial accountings, where changeable values and coefficients, like taxes or
-  seasonal deductions are heavily used. Commenting numbers' context in these
-  occasions will help you and other developers to understand with what case of
-  quote, tax, percentage, constant or changeable value they have to deal with.
+- This linter will parse your file and find some errors as defined by [Ruby Style Guide](https://github.com/github/rubocop-github/blob/master/STYLEGUIDE.md)
+
+# Following can be tested with this linter
+
+- Each line of code must be of a readable length. Unless you have a reason to, keep lines to a maximum of 118 characters. Why 118? That's the width at which the pull request diff UI needs horizontal scrolling (making pull requests harder to review).
+
+- There should be no trailing whitespaces left.
+
+- There should be spaces around operators, after commas, colons and semicolons, around { and before }.
+
+- There should be no spaces after (, [ or before ], ).
+
+- There should be no spaces after !.
+
+- There should be no unpaired |, (, ), {, }, [, ].
+
+
+
 
 ## Live Demo
 

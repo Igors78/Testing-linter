@@ -13,4 +13,5 @@ lint.content.each_with_index do |line, index|
   find_error.check_parentes_count
   find_error.check_spacing
   find_error.check_spaces
+  # sleep(0.5)
 end
