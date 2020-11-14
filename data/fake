@@ -1,6 +1,6 @@
 module Enumerable 
   def my_each
-    return to_enum (:my_each) unless block_given?
+    return to_enum (:my_each) unless block_given? 
 
     arr=self
     arr = arr.to_a if arr.instance_of?(Range)

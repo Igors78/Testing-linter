@@ -11,13 +11,14 @@ module RaisingErrors
       puts "Line #{index + 1} unclosed brackets detected"
     when 5
       puts "Line #{index + 1} unclosed curly braces detected"
-    when 6
-      puts "Line #{index + 1} unpaired pipe detected"
+
     end
   end
 
   def raise_an_issue(code, index = 0)
     case code
+    when 6
+      puts "Line #{index + 1} unpaired pipe detected"
     when 7
       puts "Line #{index + 1} missing spaces around operators/after commas/colons/semicolons, around { and before }."
     when 8

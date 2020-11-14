@@ -20,7 +20,7 @@ class CheckErrors
     raise_an_error(3, @indx) if splitted_str.count('(') != splitted_str.count(')')
     raise_an_error(4, @indx) if splitted_str.count('[') != splitted_str.count(']')
     raise_an_error(5, @indx) if splitted_str.count('{') != splitted_str.count('}')
-    raise_an_error(6, @indx) if splitted_str.count('|').odd?
+    raise_an_issue(6, @indx) if splitted_str.count('|').odd?
   end
 
   def check_spacing
