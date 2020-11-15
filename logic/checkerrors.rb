@@ -6,19 +6,31 @@ class CheckErrors
     @indx = indx
   end
 
-  def check_whitespaces
-    RaisingErrors.new.raise_an_error(1, @indx) if @str[@str.size - 2] == ' '
+  def check_whitespaces?
+    @str[@str.size - 2] == ' '
   end
 
-  def check_length
-    RaisingErrors.new.raise_an_error(2, @indx) if @str.size > 118
+  def check_length?
+    @str.size > 118
   end
 
-  def check_parentes_count
+  def check_parentes_count?
     splitted_str = @str.delete(' ').split('')
-    RaisingErrors.new.raise_an_error(3, @indx) if splitted_str.count('(') != splitted_str.count(')')
-    RaisingErrors.new.raise_an_error(4, @indx) if splitted_str.count('[') != splitted_str.count(']')
+    splitted_str.count('(') != splitted_str.count(')')
+  end
+
+  def check_bracket_count?
+    splitted_str = @str.delete(' ').split('')
+    splitted_str.count('[') != splitted_str.count(']')
+  end
+
+  def check_curly_count?
+    splitted_str = @str.delete(' ').split('')
     RaisingErrors.new.raise_an_error(5, @indx) if splitted_str.count('{') != splitted_str.count('}')
+  end
+
+  def check_pipes_count
+    splitted_str = @str.delete(' ').split('')
     RaisingErrors.new.raise_an_issue(6, @indx) if splitted_str.count('|').odd?
   end
 
