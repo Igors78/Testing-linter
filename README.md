@@ -55,8 +55,6 @@ some(arg).other
 
 [Live Demo Link](https://repl.it/@Igors78/Testing-linter#bin/main)
 
-
-
 ## On your Computer
 
 To get a local copy up and running follow these simple example steps.
@@ -77,14 +75,17 @@ To get a local copy up and running follow these simple example steps.
 
 ### Usage
 
-- Navigate to respective folder (Testing Linter), put file you want to lint in 'data' folder (or copy your code into the 'fake.rb' file) and type `bin/main <your-file-name>` or `bin/main fake.rb` in your
-  terminal.
+- Navigate to respective folder (Testing Linter), put file you want to lint in
+  'data' folder (or copy your code into the 'fake.rb' file) and type
+  `bin/main <your-file-name>` or `bin/main fake.rb` in your terminal.
 - Result will be shown
 - Follow the instructions above for the live link.
 
 ### Run tests
 
-- Tests passed can be found [here](https://github.com/Igors78/Testing-linter/pulls) by opening closed pull request and navigate to passed tests details.
+- Tests passed can be found
+  [here](https://github.com/Igors78/Testing-linter/pulls) by opening closed pull
+  request and navigate to passed tests details.
 
 ## Built with
 
