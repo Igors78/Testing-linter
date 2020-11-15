@@ -29,9 +29,9 @@ class CheckErrors
     splitted_str.count('{') != splitted_str.count('}')
   end
 
-  def check_pipes_count
+  def check_pipes_count?
     splitted_str = @str.delete(' ').split('')
-    RaisingErrors.new.raise_an_issue(6, @indx) if splitted_str.count('|').odd?
+    splitted_str.count('|').odd?
   end
 
   def check_spacing

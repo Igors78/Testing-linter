@@ -13,6 +13,7 @@ lint.content.each_with_index do |line, index|
   RaisingErrors.new.raise_an_error(3, index) if find_error.check_parentes_count?
   RaisingErrors.new.raise_an_error(4, index) if find_error.check_bracket_count?
   RaisingErrors.new.raise_an_error(5, index) if find_error.check_curly_count?
+  RaisingErrors.new.raise_an_issue(6, index) if find_error.check_pipes_count?
   find_error.check_spacing
   find_error.check_spaces
   # sleep(0.3)

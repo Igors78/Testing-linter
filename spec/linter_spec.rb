@@ -59,4 +59,15 @@ describe CheckErrors do
       expect(testing.check_curly_count?).to eq false
     end
   end
+
+  describe '#check_pipes_count?' do
+    it 'Should return true if there is excessive brackets' do
+      testing = CheckErrors.new('1|', 0)
+      expect(testing.check_pipes_count?).to eq true
+    end
+    it 'Should return false if there is no excessive brackets' do
+      testing = CheckErrors.new('1', 0)
+      expect(testing.check_pipes_count?).to eq false
+    end
+  end
 end
