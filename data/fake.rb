@@ -1,5 +1,5 @@
-sum = 1 + 2|
-a = 1
+sum = 1 + 2 |
+      a = 1
 b = 2
 1 > 2; puts 'Hi'
 [1, 2, 3].each { |e| puts e }
