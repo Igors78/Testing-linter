@@ -2,7 +2,6 @@
 require_relative '../logic/test'
 require_relative '../logic/checkerrors'
 require_relative '../logic/raisingerrors'
-require 'io/console'
 
 lint = Test.new(ARGV[0])
 lint.check_file
@@ -16,4 +15,4 @@ lint.content.each_with_index do |line, index|
   find_error.check_spaces
   # sleep(0.3)
 end
-puts $stdout
+puts 'No offences detected'.colorize(color: :green) if ObjectSpace.each_object(RaisingErrors).count.zero?
