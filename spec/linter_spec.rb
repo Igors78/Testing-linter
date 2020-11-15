@@ -1,6 +1,4 @@
 require '../logic/checkerrors'
-require '../logic/raisingerrors'
-require '../logic/test'
 
 describe CheckErrors do
   describe '#check_whitespaces?' do
