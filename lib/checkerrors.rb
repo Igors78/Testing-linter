@@ -1,4 +1,4 @@
-require_relative '../logic/raisingerrors'
+require_relative '../lib/raisingerrors'
 
 class CheckErrors
   def initialize(str = '', indx = 0)

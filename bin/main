@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
-require_relative '../logic/test'
-require_relative '../logic/checkerrors'
-require_relative '../logic/raisingerrors'
+require_relative '../lib/test'
+require_relative '../lib/checkerrors'
+require_relative '../lib/raisingerrors'
 
 lint = Test.new(ARGV[0])
 lint.check_file
