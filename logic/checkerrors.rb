@@ -26,7 +26,7 @@ class CheckErrors
 
   def check_curly_count?
     splitted_str = @str.delete(' ').split('')
-    RaisingErrors.new.raise_an_error(5, @indx) if splitted_str.count('{') != splitted_str.count('}')
+    splitted_str.count('{') != splitted_str.count('}')
   end
 
   def check_pipes_count
