@@ -7,5 +7,4 @@ a, b = 1, 2)
 some (arg).other
 [1, 2, 3]].length
 
-! array.include?(element) 
-
+! array.include?(element)
