@@ -1,4 +1,4 @@
-require '../logic/checkerrors'
+require_relative '../logic/checkerrors'
 
 describe CheckErrors do
   describe '#check_whitespaces?' do
