@@ -2,6 +2,7 @@
 require_relative '../logic/test'
 require_relative '../logic/checkerrors'
 require_relative '../logic/raisingerrors'
+require 'io/console'
 
 lint = Test.new(ARGV[0])
 lint.check_file
@@ -13,5 +14,6 @@ lint.content.each_with_index do |line, index|
   find_error.check_parentes_count
   find_error.check_spacing
   find_error.check_spaces
-  # sleep(0.5)
+  # sleep(0.3)
 end
+puts $stdout

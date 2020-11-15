@@ -8,7 +8,7 @@ class Test
 
   def check_file
     if @file_name
-      puts "Hello, #{@file_name} will be linted!"
+      puts 'Hello, welcome to Ruby linter!'
 
     else
       abort 'Enter the valid file name from data folder'

@@ -29,6 +29,29 @@
 
 - There should be no unpaired |, (, ), {, }, [, ].
 
+## Example of good code
+``` ruby
+sum = 1 + 2
+a, b = 1, 2
+1 > 2 ? true : false; puts "Hi"
+[1, 2, 3].each { |e| puts e }
+```
+
+
+``` ruby
+some(arg).other
+[1, 2, 3].length
+```
+
+
+
+``` ruby
+!array.include?(element)
+```
+
+## Example of bad code
+![badcode](screenshot1.png)
+
 ## Live Demo
 
 [Live Demo Link]()
