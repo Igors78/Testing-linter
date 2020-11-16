@@ -90,6 +90,7 @@ To get a local copy up and running follow these simple example steps.
 ## Built with
 
 - Ruby
+- Ruby Gem 'Colorize'
 
 ## Author
 

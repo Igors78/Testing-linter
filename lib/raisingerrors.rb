@@ -33,6 +33,8 @@ class RaisingErrors
     when 9
 
       puts "Line #{index + 1} spaces before ), ] detected".colorize(color: :red)
+    when 10
+      puts "Line #{index + 1} closing of [],{} or () not valid ".colorize(color: :red)
     end
   end
 
