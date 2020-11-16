@@ -34,20 +34,30 @@ class CheckErrors
     splitted_str.count('|').odd?
   end
 
-  def check_spacing
+  def check_spacing?
+    count = 0
     (0...@str.length).each do |ind|
       if ['+', '-', '=', '/', '*', '{', '}'].include?(@str[ind]) && @str[ind - 1] != ' ' && @str[ind + 1] != ' '
-
-        RaisingErrors.new.raise_an_issue(7, @indx)
+        count += 1
       end
-      RaisingErrors.new.raise_an_issue(8, @indx) if ['(', '[', '!'].include?(@str[ind]) && @str[ind + 1] == ' '
     end
+    return true if count.positive?
   end
 
-  def check_spaces
+  def check_spacing_exclamation?
+    count = 0
     (0...@str.length).each do |ind|
-      RaisingErrors.new.raise_an_issue(9, @indx) if [')', ']'].include?(@str[ind]) && @str[ind - 1] == ' '
+      count += 1 if ['(', '[', '!'].include?(@str[ind]) && @str[ind + 1] == ' '
     end
+    return true if count.positive?
+  end
+
+  def check_spaces?
+    count = 0
+    (0...@str.length).each do |ind|
+      count += 1 if [')', ']'].include?(@str[ind]) && @str[ind - 1] == ' '
+    end
+    return true if count.positive?
   end
 
   def valid_string?
