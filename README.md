@@ -1,8 +1,9 @@
 # Testing Linter
 
-- In this project, I have built my own customized linter for ruby files.
-  The main goal was to put into practice the main concepts of Object-Oriented
-  Programming gained in the Microverse curriculum Ruby module. After reading the file to lint it is iterated through line by line for parsing and testing.
+- In this project, I have built my own customized linter for ruby files. The
+  main goal was to put into practice the main concepts of Object-Oriented
+  Programming gained in the Microverse curriculum Ruby module. After reading the
+  file to lint it is iterated through line by line for parsing and testing.
 
 ![screenshot](screenshot.png)
 
@@ -61,8 +62,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-- Any PC or device with an internet connection and ability to use the command line
-  terminal
+- Any PC or device with an internet connection and ability to use the command
+  line terminal
 
 ### Setup
 
@@ -75,8 +76,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Usage
 
-- Navigate to respective folder (Testing Linter), put the file you want to lint in
-  'data' folder (or copy your code into the 'fake. rb' file) and type
+- Navigate to respective folder (Testing Linter), put the file you want to lint
+  in 'data' folder (or copy your code into the 'fake. rb' file) and type
   `bin/main <your-file-name>` or `bin/main fake. rb` in your terminal.
 - Result will be shown
 - Follow the instructions above for the live link.
