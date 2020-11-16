@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+require_relative '../lib/test'
+require_relative '../lib/checkerrors'
+require_relative '../lib/raisingerrors'
+
+lint = Test.new(ARGV[0])
+if lint.file_name
+  puts 'Hello, welcome to Ruby linter!'
+else
+  abort 'Enter the valid file name from data folder'
+end
+
+lint.read_file
+lint.content.each_with_index do |line, index|
+  find_error = CheckErrors.new(line, index)
+  puts RaisingErrors.new.raise_an_error(1, index) if find_error.check_whitespaces?
+  puts RaisingErrors.new.raise_an_error(2, index) if find_error.check_length?
+  puts RaisingErrors.new.raise_an_error(3, index) if find_error.check_parentes_count?
+  puts RaisingErrors.new.raise_an_error(4, index) if find_error.check_bracket_count?
+  puts RaisingErrors.new.raise_an_error(5, index) if find_error.check_curly_count?
+  puts RaisingErrors.new.raise_an_issue(6, index) if find_error.check_pipes_count?
+  puts RaisingErrors.new.raise_an_issue(10, index) unless find_error.valid_string?
+  puts RaisingErrors.new.raise_an_issue(7, index) if find_error.check_spacing?
+  puts RaisingErrors.new.raise_an_issue(8, index) if find_error.check_spacing_exclamation?
+  puts RaisingErrors.new.raise_an_issue(9, index) if find_error.check_spaces?
+  sleep(0.3)
+end
+puts 'No offences detected'.colorize(color: :green) if ObjectSpace.each_object(RaisingErrors).count.zero?
