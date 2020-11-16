@@ -1,18 +1,9 @@
 class Test
-  attr_reader :content, :offence
+  attr_reader :content, :file_name
 
   def initialize(file_name)
     @file_name = file_name
     @content = nil
-  end
-
-  def check_file
-    if @file_name
-      puts 'Hello, welcome to Ruby linter!'
-
-    else
-      abort 'Enter the valid file name from data folder'
-    end
   end
 
   def read_file

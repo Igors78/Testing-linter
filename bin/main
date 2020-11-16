@@ -4,7 +4,12 @@ require_relative '../lib/checkerrors'
 require_relative '../lib/raisingerrors'
 
 lint = Test.new(ARGV[0])
-lint.check_file
+if lint.file_name
+  puts 'Hello, welcome to Ruby linter!'
+else
+  abort 'Enter the valid file name from data folder'
+end
+
 lint.read_file
 lint.content.each_with_index do |line, index|
   find_error = CheckErrors.new(line, index)
