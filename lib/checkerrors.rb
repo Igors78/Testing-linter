@@ -2,7 +2,8 @@ require_relative '../lib/raisingerrors'
 
 class CheckErrors
   def initialize(str = '', indx = 0)
-    @str = str
+    @str = str.gsub(/'\S+'/, '')
+
     @indx = indx
   end
 
@@ -63,6 +64,7 @@ class CheckErrors
   def valid_string?
     stack = []
     symbols = { '{' => '}', '[' => ']', '(' => ')' }
+
     @str.each_char do |c|
       stack << c if symbols.key?(c)
       return false if symbols.key(c) && symbols.key(c) != stack.pop
