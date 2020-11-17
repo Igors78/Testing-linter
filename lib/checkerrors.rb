@@ -2,7 +2,7 @@ require_relative '../lib/raisingerrors'
 
 class CheckErrors
   def initialize(str = '', indx = 0)
-    @str = str.gsub(/'\S+'/, '')
+    @str = str.gsub(/'\S+'/, 'x')
 
     @indx = indx
   end
