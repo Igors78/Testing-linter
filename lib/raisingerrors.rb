@@ -1,20 +1,20 @@
-require 'colorize'
+require 'rainbow'
 class RaisingErrors
   def raise_an_error(code, index = 0)
     case code
     when 1
-      "Line #{index + 1} trailing whitespace(s) detected".colorize(color: :red)
+      Rainbow("Line #{index + 1} trailing whitespace(s) detected").red
     when 2
 
-      "Line #{index + 1} exceeds recommended length".colorize(color: :red)
+      Rainbow("Line #{index + 1} exceeds recommended length").red
     when 3
-      "Line #{index + 1} unclosed parentheses detected".colorize(color: :red)
+      Rainbow("Line #{index + 1} unclosed parentheses detected").red
     when 4
 
-      "Line #{index + 1} unclosed brackets detected".colorize(color: :red)
+      Rainbow("Line #{index + 1} unclosed brackets detected").red
     when 5
 
-      "Line #{index + 1} unclosed curly braces detected".colorize(color: :red)
+      Rainbow("Line #{index + 1} unclosed curly braces detected").red
 
     end
   end
@@ -23,18 +23,18 @@ class RaisingErrors
     case code
     when 6
 
-      "Line #{index + 1} unpaired pipe detected".colorize(color: :red)
+      Rainbow("Line #{index + 1} unpaired pipe detected").red
     when 7
 
-      "Line #{index + 1} missing spaces around operators/after ,/:/;, around {}.".colorize(color: :red)
+      Rainbow("Line #{index + 1} missing spaces around operators/after ,/:/;, around {}.").red
     when 8
 
-      "Line #{index + 1} spaces after (, [ or ! detected".colorize(color: :red)
+      Rainbow("Line #{index + 1} spaces after (, [ or ! detected").red
     when 9
 
-      "Line #{index + 1} spaces before ), ] detected".colorize(color: :red)
+      Rainbow("Line #{index + 1} spaces before ), ] detected").red
     when 10
-      "Line #{index + 1} closing of [],{} or () not valid ".colorize(color: :red)
+      Rainbow("Line #{index + 1} closing of [],{} or () not valid ").red
     end
   end
 

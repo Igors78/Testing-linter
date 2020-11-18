@@ -25,4 +25,4 @@ lint.content.each_with_index do |line, index|
   puts RaisingErrors.new.raise_an_issue(9, index) if find_error.check_spaces?
   sleep(0.3)
 end
-puts 'No offences detected'.colorize(color: :green) if ObjectSpace.each_object(RaisingErrors).count.zero?
+puts Rainbow('No offences detected').blue if ObjectSpace.each_object(RaisingErrors).count.zero?
